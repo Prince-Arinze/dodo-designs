@@ -37,8 +37,6 @@ const ResponsiveSidebar: FC<ResponsiveSidebarProps> = ({ isOpen, onClose }) => {
             <a href="#" className="flex items-center py-3 px-3">
               <Star className="mr-3" size={18} /> Starred
             </a>
-
-            {/* Horizontal line separator */}
             <hr className="my-4 border-t border-gray-200" />
 
             <a href="#" className="flex items-center py-3 px-3">
@@ -47,7 +45,7 @@ const ResponsiveSidebar: FC<ResponsiveSidebarProps> = ({ isOpen, onClose }) => {
           </nav>
         </div>
 
-        <div className="flex flex-col mb-10">
+        <div className="flex flex-col mb-12 md:mb-10">
           <a href="#" className="flex items-center py-3 px-3">
             <Info className="mr-3" size={18} /> Support
           </a>

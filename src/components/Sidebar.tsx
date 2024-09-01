@@ -31,7 +31,6 @@ const Sidebar: React.FC = () => {
             </a>
           </div>
 
-          {/* Horizontal line separator */}
           <hr className="my-4 border-t border-gray-200" />
 
           <div className="flex flex-col gap-4">
