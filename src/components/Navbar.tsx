@@ -40,7 +40,7 @@ const Navbar: FC = () => {
                     />
                 </div>
             </div>
-            <div className="flex items-center space-x-6 md:space-x-20">
+            <div className="flex items-center ml-4 md:ml-0 space-x-6 md:space-x-20">
             <div className="relative w-full max-w-xs h-[40px]">
                 <input
                 style={{ boxShadow: '0px 1px 2px 0px #1018280D' }}
