@@ -1,5 +1,4 @@
 import { Clock, Folder, Home, Info, Settings, Star, X } from 'lucide-react';
-import { FC, useEffect } from 'react';
 import MobileSecondarySidebar from './MobileSecondaryNav';
 import { AeonikRegular } from '@fonts';
 import { useAppContext } from '../../AppContext';
@@ -27,7 +26,7 @@ const ResponsiveSidebar = () => {
         >
           <X />
         </button>
-        <div className="flex flex-col h-[93vh] md:h-full gap-2 text-[#344054] font-medium text-sm max-w-[234px] mt-10">
+        <div className="flex flex-col h-[90vh] md:h-full gap-2 text-[#344054] font-medium text-sm max-w-[234px] mt-10">
           <div className="flex-1 flex flex-col">
             <div className="mb-4 flex items-center">
               <MobileSecondarySidebar />
@@ -51,11 +50,11 @@ const ResponsiveSidebar = () => {
             </nav>
           </div>
 
-          <div className="flex flex-col mb-10">
-            <a href="#" className="flex items-center py-3 px-3">
+          <div className="flex flex-col mb-12 md:mb-10">
+            <a href="#" className="flex items-center py-2 md:py-3 px-3">
               <Info className="mr-3" size={18} /> Support
             </a>
-            <a href="#" className="flex items-center py-3 px-3">
+            <a href="#" className="flex items-center py-2 md:py-3 px-3">
               <Settings className="mr-3" size={18} /> Settings
             </a>
           </div>
