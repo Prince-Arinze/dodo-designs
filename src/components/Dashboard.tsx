@@ -25,7 +25,7 @@ const Dashboard: React.FC = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-4 xl:grid-cols-9 mb-8">
-        <div className="bg-white p-4 rounded-[12px] shadow md:col-span-2 xl:col-span-5 h-full divide-y divide-gray-200 max-h-[296px] lg:max-h-[320px]">
+        <div className="bg-white p-4 rounded-[12px] shadow md:col-span-2 xl:col-span-5 h-full divide-y divide-gray-200 max-h-[320px]">
           <div className={`flex items-center justify-between pb-4 ${AeonikRegular.className} text-[#0C111D]`}>
             <div>
               <h3 className="text-xl font-bold">Getting Started</h3>
@@ -50,7 +50,7 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-white p-4 rounded-[12px] shadow md:col-span-2 xl:col-span-4 h-full  divide-y divide-gray-200 max-h-[296px] lg:max-h-[320px]">
+        <div className="bg-white p-4 rounded-[12px] shadow md:col-span-2 xl:col-span-4 h-full  divide-y divide-gray-200 max-h-[320px]">
         <div className={`pb-4 ${AeonikRegular.className} text-[#0C111D]`}>
               <h3 className="text-xl font-bold">Research Tips and Tricks</h3>
               <p className={`font-normal text-xs ${AeonikLight.className}`}>Three simple steps to launch your first project</p>
