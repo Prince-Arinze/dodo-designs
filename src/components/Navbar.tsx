@@ -8,12 +8,10 @@ import NotificationImg from "@/components/assets/notification.svg";
 import Logo from "@/components/assets/zadwax.svg";
 import MobileLogo from "@/components/assets/z.svg";
 import ResponsiveSidebar from './ResponsiveSidebar';
+import { useAppContext } from '../../AppContext';
 
 const Navbar: FC = () => {
-    const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
-    const toggleSidebar = () => {
-        setIsSidebarOpen(!isSidebarOpen);
-    };
+    const {toggleSidebar} = useAppContext()
   return (
     <>
         <nav className={`w-full z-20 lg:w-[calc(100vw_-_302px)] fixed bg-white p-4 shadow-md h-[72px] flex items-center ${AeonikLight.className}`}>
@@ -66,18 +64,18 @@ const Navbar: FC = () => {
                 </div>
                 <div className="w-8 h-8 rounded-full flex items-center">
                     <Image
-                    src={Avatar}
-                    alt="Profile"
-                    width={32}
-                    height={32}
-                    className="rounded-full"
+                        src={Avatar}
+                        alt="Profile"
+                        width={32}
+                        height={32}
+                        className="rounded-full cursor-pointer"
                     />
                 </div>
             </div>
             </div>
         </div>
         </nav>
-        <ResponsiveSidebar isOpen={isSidebarOpen} onClose={toggleSidebar}/>
+        <ResponsiveSidebar/>
     </>
   );
 };

@@ -1,13 +1,28 @@
-import React from 'react';
-import { AeonikBold, AeonikLight, AeonikRegular } from '@fonts';
+"use client";
+import React, {useEffect} from 'react';
+import { AeonikBold,AeonikLight,AeonikRegular } from '@fonts';
 import bgImage from "@/components/assets/bg-image.png";
 import BarChart from './BarChart';
+import { useAppContext } from '../../AppContext';
 
 const Dashboard: React.FC = () => {
+  const { isSidebarOpen} = useAppContext()
+
+  useEffect(() => {
+    if (isSidebarOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isSidebarOpen]);
   return (
     <div className="w-[95%] lg:max-w-[95%] 2xl:max-w-[1135px] mx-auto py-6 font-normal mt-[72px]">
       <h1 className={`text-3xl mb-2 text-[#0C111D] ${AeonikBold.className}`}>Welcome Susan,</h1>
-      <p className={`text-md mb-8 ${AeonikRegular.className}`}>Get ready to complete your research processes on Zadwax</p>
+      <p className={`text-sm text-[#344054] mb-6 ${AeonikRegular.className}`}>Get ready to complete your research processes on Zadwax</p>
       <div
         className="flex flex-col justify-center min-h-[169px] bg-[#F0EBFC] p-6 rounded-[12px] mb-8 relative overflow-hidden"
         style={{
@@ -80,8 +95,8 @@ const Dashboard: React.FC = () => {
                     <BarChart />
               </div>
               <div className='border-t-0 border-[#EAECF0] border-[1px] h-[100px] p-3 rounded-[0px_0px_12px_12px]'>
-                  <h4 className="text-base text-gray-700 font-semibold">Academic literature review</h4>
-                  <p className={`mt-2font-normal text-gray-500 ${AeonikLight.className} text-xs`}>Organize your sources and synthesize information effectively.</p>
+                  <h4 className="text-base text-[#344054] font-medium">Academic literature review</h4>
+                  <p className={`mt-2 font-normal text-gray-500 ${AeonikLight.className} text-xs`}>Organize your sources and synthesize information effectively.</p>
               </div>
         </div>
         <div className="min-h-[227px] h-full">
@@ -89,8 +104,8 @@ const Dashboard: React.FC = () => {
                 <BarChart />
              </div>
              <div className='border-t-0 border-[#EAECF0] border-[1px] h-[100px] p-3 rounded-[0px_0px_12px_12px]'>
-                  <h4 className="text-base text-gray-700 font-semibold">Data analysis templates</h4>
-                  <p className={`mt-2font-normal text-gray-500 ${AeonikLight.className} text-xs`}>Streamline patient data collection and analysis for medical research.</p>
+                  <h4 className="text-base text-[#344054] font-medium">Data analysis templates</h4>
+                  <p className={`mt-2 font-normal text-gray-500 ${AeonikLight.className} text-xs`}>Streamline patient data collection and analysis for medical research.</p>
              </div>
         </div>
         <div className="min-h-[227px] h-full">
@@ -98,8 +113,8 @@ const Dashboard: React.FC = () => {
                 <BarChart />
             </div>
             <div className='border-t-0 border-[#EAECF0] border-[1px] h-[100px] p-3 rounded-[0px_0px_12px_12px]'>
-                <h4 className="text-base text-gray-700 font-semibold">UX Heuristic template</h4>
-                <p className={`mt-2font-normal text-gray-500 ${AeonikLight.className} text-xs`}>Assess your interface against established usability principles.</p>
+                <h4 className="text-base text-[#344054] font-medium">UX Heuristic template</h4>
+                <p className={`mt-2 font-normal text-gray-500 ${AeonikLight.className} text-xs`}>Assess your interface against established usability principles.</p>
             </div>
         </div>
         <div className="min-h-[227px] h-full">
@@ -107,8 +122,8 @@ const Dashboard: React.FC = () => {
               <BarChart />
           </div>
           <div className='border-t-0 border-[#EAECF0] border-[1px] h-[100px] p-3 rounded-[0px_0px_12px_12px]'>
-              <h4 className="text-base text-gray-700 font-semibold">Affinity mapping template</h4>
-              <p className={`mt-2font-normal text-gray-500 ${AeonikLight.className} text-xs`}>Assess your interface against established usability principles.</p>
+              <h4 className="text-base text-[#344054] font-medium">Affinity mapping template</h4>
+              <p className={`mt-2 font-normal text-gray-500 ${AeonikLight.className} text-xs`}>Assess your interface against established usability principles.</p>
           </div>
         </div>
       </div>
