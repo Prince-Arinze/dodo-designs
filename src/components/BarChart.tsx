@@ -30,8 +30,8 @@ const BarChart: React.FC = () => {
           '#BAA1F2',
         ],
         borderRadius: 5,
-        barThickness: 20,
-        categoryPercentage: 0.2,
+        barThickness: 15,
+        categoryPercentage: 0.5,
         barPercentage: 1.0,
       },
     ],
@@ -77,7 +77,7 @@ const BarChart: React.FC = () => {
   };
 
   return (
-    <div className="h-[80%] w-[40%] xl:w-[50%] flex items-center justify-center mt-4">
+    <div className="h-[93px] w-[90px] flex items-center justify-center mt-4">
       <div className="relative w-full h-[100%]">
         <Bar data={data} options={options} plugins={[customLinePlugin]} />
       </div>

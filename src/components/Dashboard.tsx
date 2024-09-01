@@ -5,6 +5,9 @@ import bgImage from "@/components/assets/bg-image.png";
 import BarChart from './BarChart';
 import { useAppContext } from '../../AppContext';
 
+import clusterLine from "@/components/assets/cluster-lines.svg";
+import chartCurve from "@/components/assets/c.svg";
+
 const Dashboard: React.FC = () => {
   const { isSidebarOpen} = useAppContext()
 
@@ -90,8 +93,8 @@ const Dashboard: React.FC = () => {
 
       <h3 className={`text-xl text-[#0C111D] font-bold mb-4 ${AeonikBold.className}`}>Resources for you</h3>
       <div className={`grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4 ${AeonikRegular.className} font-medium`}>
-        <div className="min-h-[227px] h-full">
-              <div className='h-[127px] rounded-t-[12px] bg-[#D0BFF6] flex items-center justify-center '>
+        <div className="h-[227px]">
+              <div style={containerStyle} className='h-[127px] rounded-t-[12px] bg-[#D0BFF6] flex items-center justify-center '>
                     <BarChart />
               </div>
               <div className='border-t-0 border-[#EAECF0] border-[1px] h-[100px] p-3 rounded-[0px_0px_12px_12px]'>
@@ -99,8 +102,8 @@ const Dashboard: React.FC = () => {
                   <p className={`mt-2 font-normal text-gray-500 ${AeonikLight.className} text-xs`}>Organize your sources and synthesize information effectively.</p>
               </div>
         </div>
-        <div className="min-h-[227px] h-full">
-             <div className='h-[127px] rounded-t-[12px] bg-[#D0BFF6] flex items-center justify-center'>
+        <div className="h-[227px]">
+             <div style={containerStyle} className='h-[127px] rounded-t-[12px] bg-[#D0BFF6] flex items-center justify-center'>
                 <BarChart />
              </div>
              <div className='border-t-0 border-[#EAECF0] border-[1px] h-[100px] p-3 rounded-[0px_0px_12px_12px]'>
@@ -108,8 +111,8 @@ const Dashboard: React.FC = () => {
                   <p className={`mt-2 font-normal text-gray-500 ${AeonikLight.className} text-xs`}>Streamline patient data collection and analysis for medical research.</p>
              </div>
         </div>
-        <div className="min-h-[227px] h-full">
-            <div className='h-[127px] rounded-t-[12px] bg-[#D0BFF6] flex items-center justify-center'>
+        <div className="h-[227px]">
+            <div style={containerStyle} className='h-[127px] rounded-t-[12px] bg-[#D0BFF6] flex items-center justify-center'>
                 <BarChart />
             </div>
             <div className='border-t-0 border-[#EAECF0] border-[1px] h-[100px] p-3 rounded-[0px_0px_12px_12px]'>
@@ -117,8 +120,8 @@ const Dashboard: React.FC = () => {
                 <p className={`mt-2 font-normal text-gray-500 ${AeonikLight.className} text-xs`}>Assess your interface against established usability principles.</p>
             </div>
         </div>
-        <div className="min-h-[227px] h-full">
-          <div className='h-[127px] rounded-t-[12px] bg-[#D0BFF6] flex items-center justify-center'>
+        <div className="h-[227px]">
+          <div style={containerStyle} className='h-[127px] rounded-t-[12px] bg-[#D0BFF6] flex items-center justify-center'>
               <BarChart />
           </div>
           <div className='border-t-0 border-[#EAECF0] border-[1px] h-[100px] p-3 rounded-[0px_0px_12px_12px]'>
@@ -130,5 +133,15 @@ const Dashboard: React.FC = () => {
     </div>
   );
 };
+
+
+
+const containerStyle = {
+  backgroundImage: `url(${clusterLine.src}), url(${chartCurve.src})`,
+  backgroundPosition: 'center, calc(100% - 0.5rem) calc(100% - 0.5rem)',
+  backgroundRepeat: 'no-repeat, no-repeat',
+  backgroundSize: '80%, auto',
+};
+
 
 export default Dashboard;
